@@ -1,17 +1,28 @@
-int Xm = 0
+# Xm - Posição 
+
+int analogPin = A0; // Saída Vo
+
+int Xm = 0; // Variável para guardar valor lido
+
+
 
 
 
 void setup() {
-  // put your setup code here, to run once:
-
+  Serial.begin(9600);  // Configura a porta serial
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  Xm = analogRead(analogPin); // lê o pino de entrada
+  Serial.println(Xm);         // imprime o valor na porta serial
 
 }
 
 
+# IMPLEMENTAR FILTROS DIGITAIS
 
-# Xm = (Ix2-Ix1)/(Ix1+Ix2)*(Lx/2)
+/* - Filtrar harmônicos específicos
+ * -  
+ *  
+ *  
+ */
